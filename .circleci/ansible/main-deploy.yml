@@ -1,0 +1,7 @@
+---
+- name: deploy the app
+  hosts: all
+  user: ubuntu
+
+  roles:
+   - deploy

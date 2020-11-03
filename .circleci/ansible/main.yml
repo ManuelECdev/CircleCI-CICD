@@ -1,0 +1,9 @@
+---
+- name: Configure the backend server
+  hosts: all
+  user: ubuntu
+
+  roles:
+   - configure-server
+
+

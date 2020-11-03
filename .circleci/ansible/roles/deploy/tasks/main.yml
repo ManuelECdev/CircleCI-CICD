@@ -1,0 +1,26 @@
+---
+- name: Copy backend app
+  copy:
+    src: "../../backend.tar.gz"
+    dest: "~/"
+
+- name: "Unzip backend files"
+  shell: |
+    tar -xzvf ~/backend.tar.gz -C ~/
+
+- name: "Build npm packages"
+  shell: |
+    cd /home/ubuntu/backend
+    npm install
+    npm run build
+    npm run prestart:prod
+
+- name: Executing node
+  shell: |
+    cd /home/ubuntu/backend
+    pm2 start npm --name backend -- start
+
+
+- name: "run node_exporter"
+  shell: |
+    node_exporter &
