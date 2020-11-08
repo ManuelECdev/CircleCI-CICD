@@ -1,6 +1,6 @@
 ## Summary
 
-A frontend and backend apps are given and the scope is the following:
+The scope is to operationalize a frontend and a backend application:
 
 - Utilize Deployment Strategies to design and build CI/CD pipelines that support Continuous Delivery processes.
 - Utilize a configuration management tool to accomplish deployment to cloud-based servers.
